@@ -7,7 +7,7 @@ license = "MIT"
 description = "library that adds a count_where method to Iterator, to easily count items matching a condition"
 homepage = "https://github.com/bryceac/count_where"
 readme = "README.mediawiki"
-repository = "https://github.com/bryceac"
+repository = "https://github.com/bryceac/count_where"
 keywords = ["count", "where", "countwhere", "iterator"]
 
 
