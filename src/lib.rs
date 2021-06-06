@@ -1,9 +1,9 @@
-mod count_where_ext;
+pub mod count_where_ext;
 
 #[cfg(test)]
 mod tests {
-    use crate::count_where_ext::CountWhereExt;
-    
+    pub use crate::count_where_ext::CountWhereExt as CountWhere;
+
     #[test]
     fn has_three_fives() {
         let numbers = [5, 5, 5, 2, 1];
