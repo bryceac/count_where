@@ -30,11 +30,11 @@ While this library does not provide the same simplicity as the Swift code seen a
 
 ===Usage===
 
-Currently, this library can only be used by downloading an archive or cloning this repo and using absolutes paths in Cargo.toml, like this:
+To use this library, add the following to the <strong>Cargo.toml</strong> file:
 
 <pre>
 [dependencies]
-count_where = { path = "/path/to/count_where"}
+count_where = "0.1.0"
 </pre>
 
 Afterwards, it is as simple as putting the following in the source file needing the method:
