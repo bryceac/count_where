@@ -8,6 +8,7 @@ description = "library that adds a count_where method to Iterator, to easily cou
 homepage = "https://github.com/bryceac/count_where"
 readme = "README.mediawiki"
 repository = "https://github.com/bryceac"
+keywords = ["count", "where", "countwhere", "iterator"]
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
