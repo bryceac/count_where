@@ -4,7 +4,7 @@
 
 '''Description:''' A single trait library that adds an iterator method allowing one to easily count up elements matching a particular condition.
 
-'''License:''' See License
+'''License:''' See LICENSE
 
 ==Notes==
 
