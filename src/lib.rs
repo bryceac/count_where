@@ -1,3 +1,4 @@
+mod count_where_ext;
 #[cfg(test)]
 mod tests {
     #[test]
