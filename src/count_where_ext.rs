@@ -1,4 +1,4 @@
-/// trait extension that adds count_where functionality
+/// trait extension that adds count_where functionality to iterators.
 pub trait CountWhereExt: Iterator {
 	fn count_where<P: FnMut(&Self::Item) -> bool>(self, predicate: P) -> usize;
 }
@@ -6,7 +6,11 @@ pub trait CountWhereExt: Iterator {
 // apply trait to all types implementing the Iterator trait.
 impl<I> CountWhereExt for I where I: Iterator {
     
-    /// count elements matching given predicate. the parameter in the closure is of &&T, so it must be dereferenced to do comparisons.
+    /** 
+     * count elements matching given predicate.
+     * # Example
+     * let numbers = [5, 5, 5, 2, 1];
+     * assert_eq1(3, numbers.iter().count_where(|n| **n == 5)); */ 
 	fn count_where<P: FnMut(&Self::Item) -> bool>(self, predicate: P)-> usize {
 		
         // count up items found in filter.
