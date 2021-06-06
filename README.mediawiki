@@ -55,7 +55,7 @@ fn main() {
 }
 </pre>
 
-Because <span style="font-weight:bold">n</span> is of type <strong>&&T</strong>, it needs to be dereferenced as seen about, in order to make the comparison.
+Because <span style="font-weight:bold">n</span> is of type <strong>&&T</strong>, it needs to be dereferenced as seen above, in order to make the comparison.
 
 This could change in the future, which I would have liked to do, but because I am not as experienced with Rust as I am with Swift, this will be something I need to live with.
 
