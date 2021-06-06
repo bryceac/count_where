@@ -1,0 +1,83 @@
+=count_where=
+
+'''Author:''' Bryce Campbell
+
+'''Description:''' A single trait library that adds an iterator method allowing one to easily count up elements matching a particular condition.
+
+'''License:''' See License
+
+==Notes==
+
+This library has only been tested with Rust 1.51.0 on macOS Big Sur, but should work on any platform.
+
+===Why Create this Library?===
+
+I like dabbling in programming from time to time, and one day I tried to make a Rust equivalent of <a href="https://github.com/bryceac/yahtzee">this project</a>, to help me gain more experience with Rust.
+
+While I could figure out most things, I had a bit of trouble with how I was implementing things, such as a counting method to determine how many times a number occurred.
+
+Even though I could create a function that took the data and a number to look for, it seemed to be not quite as nice as the extension I wrote for the Swift variant, which worked for all Sequences that had items that conformed to Equatable.
+
+As a result, I decided to look into creating an extension on Iterator in Rust, so that I could do something like this in Rust:
+
+<pre>
+sequence.count { $0 == number }
+</pre>
+
+Not only did I kind of succeed when writing the code for the library, but it gave me a good chance to see how to make a ttrait extension and creating a library right in Rust.
+
+While this library does not provide the same simplicity as the Swift code seen above, it still provides the same convenience, which is what I needed.
+
+===Usage===
+
+Currently, this library can only be used by downloading an archive or cloning this repo and using absolutes paths in Cargo.toml, like this:
+
+<pre>
+[dependencies]
+count_where = { path = "/path/to/count_where"}
+</pre>
+
+Afterwards, it is as simple as putting the following in the source file needing the method:
+
+<pre>
+use count_where::CountWhere;
+</pre>
+
+You can then use code like this to do your counting:
+
+<pre>
+fn main() {
+    let numbers = [5, 5, 5, 2, 1];
+
+    let number = 5
+
+    println!("{} appears {} times", number, numbers.iter().count_where(|n| **n == number));
+}
+</pre>
+
+Because <span style="font-weight:bold">n</span> is of type <strong>&&T</strong>, it needs to be dereferenced as seen about, in order to make the comparison.
+
+This could change in the future, which I would have liked to do, but because I am not as experienced with Rust as I am with Swift, this will be something I need to live with.
+
+===Contributing===
+
+If you would like to contribute to this library, feel free to create a fork and send your modifications.
+
+One thing that I would really like is for the provided function to usable in a way lie the filter method, which is utilitized like this:
+
+<pre>
+fn main() {
+    let numbers = [5, 5, 5, 2, 1];
+    let filtered_numbers = numbers.iter().filter(|n| n == 5);
+
+    println!("{}", filtered_numbers);
+}
+</pre>
+
+===Support===
+
+Due to my experience with Rust being limited, in comparison to Swift, I cannot provide that much support, so expect to be on your own.
+
+However, I can try to check things out, so feel free contact me at the email below.
+
+tonyhawk2100@gmail.com
