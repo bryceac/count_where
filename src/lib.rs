@@ -31,4 +31,11 @@ mod tests {
 
         assert_eq!(3, numbers.iter().count_where(|n| **n == 5))
     }
+
+    #[test]
+    fn has_two_numbers_less_than_five() {
+        let numbers = [5, 5, 5, 2, 1];
+
+        assert_eq!(2, numbers.iter().count_where(|n| **n < 5))
+    }
 }
