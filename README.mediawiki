@@ -55,7 +55,7 @@ To use this library, add the following to the <strong>Cargo.toml</strong> file:
 
 <pre>
 [dependencies]
-count_where = "0.1.0"
+count_where = "0.1.1"
 </pre>
 
 Afterwards, it is as simple as putting the following in the source file needing the method:
