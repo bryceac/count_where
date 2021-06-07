@@ -4,7 +4,7 @@ pub trait CountWhereExt: Iterator {
 }
 
 // apply trait to all types implementing the Iterator trait.
-impl<I> CountWhereExt for I where I: Iterator, I::Item: Eq + Copy + Clone {
+impl<I> CountWhereExt for I where I: Iterator, I::Item: Copy + Clone + Ord {
     
     /** 
      * count elements matching given predicate.
