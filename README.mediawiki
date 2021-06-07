@@ -6,6 +6,27 @@
 
 '''License:''' See LICENSE
 
+==Version History==
+
+<ul>
+<li>
+<dl>
+<dt style="font-weight:bold">0.1.1</dt>
+<dd>
+<p>Released June 7, 2021</p>
+<p>Allows comparison booleans in closure.</p>
+</dd>
+</dl>
+</li>
+<li>
+<dt style="font-weight:bold">0.1</dt>
+<dd>
+<p>Released June 6, 2021</p>
+<p>Initial release.</p>
+</dd>
+</li>
+</ul>
+
 ==Notes==
 
 This library has only been tested with Rust 1.51.0 on macOS Big Sur, but should work on any platform.
